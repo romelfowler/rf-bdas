@@ -1,0 +1,1351 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+/* =======================================
+VARIABLES
+======================================= */
+/* line 23, assets/sass/style.scss */
+body {
+  font-family: "Roboto", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  color: #080808;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 32, assets/sass/style.scss */
+.parallax {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 40, assets/sass/style.scss */
+.parallax img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Preloader */
+/* line 47, assets/sass/style.scss */
+.preloader {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+/* line 54, assets/sass/style.scss */
+.preloader img {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+}
+/* line 60, assets/sass/style.scss */
+.preloader div {
+  display: none;
+  /* Preload the Second Pricing Image */
+  background: url("/wp-content/themes/bd_air_solution/assets/img/pricing2.jpg") no-repeat 9999px 9999px;
+  background-position: 9999px 9999px;
+}
+
+/* Typography */
+/* line 70, assets/sass/style.scss */
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #8a8e91;
+}
+
+/* line 76, assets/sass/style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  position: relative;
+  margin: 10px 0;
+}
+
+/* line 87, assets/sass/style.scss */
+h1 {
+  font-size: 60px;
+}
+
+/* line 91, assets/sass/style.scss */
+h2 {
+  font-size: 48px;
+}
+
+/* line 95, assets/sass/style.scss */
+h3 {
+  font-size: 30px;
+}
+
+/* line 99, assets/sass/style.scss */
+h4 {
+  font-size: 24px;
+}
+
+/* line 103, assets/sass/style.scss */
+h5 {
+  font-size: 18px;
+}
+
+/* line 107, assets/sass/style.scss */
+h6 {
+  font-size: 16px;
+}
+
+/* line 111, assets/sass/style.scss */
+ul.white-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 116, assets/sass/style.scss */
+ul.white-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* line 122, assets/sass/style.scss */
+ul.white-list li:before {
+  content: ' ';
+  position: relative;
+  top: -3px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
+  background: white;
+}
+
+/* line 133, assets/sass/style.scss */
+header {
+  position: relative;
+  width: 100%;
+  color: white;
+  background: rgba(28, 36, 65, 0.93);
+  background: url("/wp-content/themes/bd_air_solution/assets/img/sky_bg.jpg");
+  background-size: cover;
+}
+/* line 142, assets/sass/style.scss */
+header .table {
+  display: table;
+  height: 100%;
+}
+/* line 147, assets/sass/style.scss */
+header .container {
+  height: 100%;
+}
+/* line 153, assets/sass/style.scss */
+header .text-center h1, header .text-center h2, header .text-center h3, header .text-center h4 {
+  color: #080808;
+}
+/* line 158, assets/sass/style.scss */
+header .header-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: #080808;
+}
+/* line 165, assets/sass/style.scss */
+header .typed {
+  display: inline-block;
+  margin: 0;
+}
+/* line 170, assets/sass/style.scss */
+header .typed-cursor {
+  font-size: 60px;
+  display: inline-block;
+  margin: 0 10px;
+  color: #4a4a94;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* line 184, assets/sass/style.scss */
+a {
+  text-decoration: none;
+  color: #4a4a94;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Bar ( Navbar ) */
+/* line 192, assets/sass/style.scss */
+nav.navbar {
+  position: absolute;
+  z-index: 9500;
+  width: 100%;
+  width: 100vw;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 200, assets/sass/style.scss */
+nav.navbar .navbar-nav li.active a:not(.btn) {
+  color: #4a4a94 !important;
+}
+
+/* line 205, assets/sass/style.scss */
+nav.navbar-fixed-top {
+  z-index: 9499;
+  top: 0;
+  padding: 25px 0;
+  opacity: 0;
+  background: white;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* line 214, assets/sass/style.scss */
+nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
+  color: #bbb;
+}
+
+/* line 218, assets/sass/style.scss */
+.icon-bar {
+  background: #bbb;
+}
+
+/* Buttons */
+/* line 223, assets/sass/style.scss */
+.btn {
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 235, assets/sass/style.scss */
+.btn:hover,
+.btn:focus {
+  color: white;
+}
+
+/* line 240, assets/sass/style.scss */
+.btn.btn-blue {
+  background: #4a4a94;
+}
+
+/* line 244, assets/sass/style.scss */
+.btn.btn-blue:hover {
+  background: #31b9ff;
+}
+
+/* line 248, assets/sass/style.scss */
+.btn.btn-blue-fill {
+  color: #4a4a94;
+  border-color: #4a4a94;
+  background: transparent;
+}
+
+/* line 254, assets/sass/style.scss */
+.btn.btn-blue-fill:hover {
+  color: white;
+  background: #4a4a94;
+}
+
+/* line 259, assets/sass/style.scss */
+.btn.btn-white-fill {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+
+/* line 265, assets/sass/style.scss */
+.btn.btn-white-fill:hover {
+  color: #4a4a94;
+  background: #fff;
+}
+
+/* line 270, assets/sass/style.scss */
+.btn.btn-gray-fill {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+
+/* line 276, assets/sass/style.scss */
+.btn.btn-gray-fill:hover {
+  border-color: #bbb;
+  background: #bbb;
+}
+
+/* Blink Cursor */
+/* line 283, assets/sass/style.scss */
+.blink {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  width: 4px;
+  height: 50px;
+  height: 5vh;
+  margin: 0 10px;
+}
+
+/* line 293, assets/sass/style.scss */
+.navbar {
+  top: 50px;
+}
+
+/* line 297, assets/sass/style.scss */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sections */
+/* line 302, assets/sass/style.scss */
+section {
+  position: relative;
+}
+
+/* line 306, assets/sass/style.scss */
+.section {
+  padding: 40px 0;
+  background: #fff;
+}
+
+/* line 311, assets/sass/style.scss */
+.section-padded {
+  padding: 140px 0 40px;
+}
+
+/* line 315, assets/sass/style.scss */
+.cut-top {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  top: -80px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 80px solid transparent;
+  border-right: 30px solid white;
+}
+
+/* line 327, assets/sass/style.scss */
+.cut-bottom {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  bottom: -80px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 80px solid transparent;
+  border-left: 30px solid white;
+}
+
+/* line 339, assets/sass/style.scss */
+.intro-tables {
+  top: -130px;
+  position: relative;
+}
+
+/* line 344, assets/sass/style.scss */
+.intro-table {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0% 0%;
+}
+
+/* line 351, assets/sass/style.scss */
+.intro-table-first {
+  background-image: linear-gradient(rgba(0, 64, 146, 0.95), #000124), url("/wp-content/themes/bd_air_solution/assets/img/cal.jpg");
+}
+
+/* line 355, assets/sass/style.scss */
+.intro-table-hover {
+  -webkit-transition: background-image 0.3s ease, background-position 0.3s;
+  transition: background-image 0.3s ease, background-position 0.3s;
+  background: linear-gradient(45deg, #29087b, #4a4a94);
+}
+
+/* line 362, assets/sass/style.scss */
+.intro-table-hover h4 {
+  -webkit-transform: translateY(170px);
+  transform: translateY(170px);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 369, assets/sass/style.scss */
+.intro-table-hover:hover {
+  background: linear-gradient(45deg, #4a4a94, #29087b);
+  background-position: 50% 50%;
+}
+
+/* line 374, assets/sass/style.scss */
+.intro-table-third {
+  background-image: linear-gradient(#4a4a94, rgba(41, 8, 123, 0.81)), url("/wp-content/themes/bd_air_solution/assets/img/filter.jpg");
+}
+
+/* line 378, assets/sass/style.scss */
+.intro-table-hover .expand {
+  margin: 30px;
+  margin-top: 120px;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s;
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+/* line 389, assets/sass/style.scss */
+.intro-table-hover:hover h4 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* line 394, assets/sass/style.scss */
+.intro-table-hover:hover .expand {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 401, assets/sass/style.scss */
+.intro-table-hover .hide-hover {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* line 406, assets/sass/style.scss */
+.intro-table-hover:hover .hide-hover {
+  opacity: 0;
+}
+
+/* line 410, assets/sass/style.scss */
+.intro-tables .intro-table {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+}
+
+/* line 417, assets/sass/style.scss */
+.intro-tables .intro-table .heading {
+  margin: 0;
+  padding: 30px;
+}
+
+/* line 422, assets/sass/style.scss */
+.intro-tables .intro-table .small-heading {
+  margin: 0;
+  padding: 0 30px;
+}
+
+/* line 427, assets/sass/style.scss */
+.intro-tables .intro-table .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 432, assets/sass/style.scss */
+.intro-tables .intro-table .owl-schedule .schedule-row {
+  padding: 10px 30px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* line 438, assets/sass/style.scss */
+.owl-schedule .schedule-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* line 442, assets/sass/style.scss */
+.owl-testimonials .author {
+  margin-top: 50px;
+}
+
+/* line 446, assets/sass/style.scss */
+.ripple-effect {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  -webkit-animation: ripple-animation 2s;
+  animation: ripple-animation 2s;
+}
+
+@-webkit-keyframes ripple-animation {
+  from {
+    opacity: 0.2;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(100);
+    transform: scale(100);
+  }
+}
+@keyframes ripple-animation {
+  from {
+    opacity: 0.2;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(100);
+    transform: scale(100);
+  }
+}
+/* line 482, assets/sass/style.scss */
+.services {
+  margin: 40px 0;
+}
+
+/* line 486, assets/sass/style.scss */
+.service {
+  width: 100%;
+  height: 320px;
+  margin: 80px 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 496, assets/sass/style.scss */
+.service .icon-holder {
+  position: relative;
+  top: 100px;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px;
+  background: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 507, assets/sass/style.scss */
+.service .heading {
+  position: relative;
+  top: 80px;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* line 514, assets/sass/style.scss */
+.service .icon-holder > img.icon {
+  width: 40px;
+}
+
+/* line 518, assets/sass/style.scss */
+.service:hover {
+  border-color: #4a4a94;
+}
+
+/* line 522, assets/sass/style.scss */
+.service:hover .icon-holder {
+  top: -30px;
+}
+
+/* line 526, assets/sass/style.scss */
+.service:hover .heading {
+  top: -30px;
+}
+
+/* line 530, assets/sass/style.scss */
+.service .description {
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+/* line 541, assets/sass/style.scss */
+.service:hover .description {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 548, assets/sass/style.scss */
+.team {
+  margin: 80px 0;
+  padding-bottom: 60px;
+  background: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07);
+}
+
+/* line 555, assets/sass/style.scss */
+.team .cover .overlay {
+  height: 250px;
+  padding-top: 60px;
+  opacity: 0;
+  background: rgba(0, 168, 255, 0.9);
+  -webkit-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+}
+
+/* line 564, assets/sass/style.scss */
+.team:hover .cover .overlay {
+  opacity: 1;
+}
+
+/* line 568, assets/sass/style.scss */
+.team .avatar {
+  position: relative;
+  z-index: 2;
+  margin-top: -60px;
+  border-radius: 50%;
+}
+
+/* line 575, assets/sass/style.scss */
+.team .title {
+  margin: 50px 0;
+}
+
+/* Pricing */
+/* line 580, assets/sass/style.scss */
+#pricing {
+  background: #4a4a94 url("/wp-content/themes/bd_air_solution/assets/img/Service_1.jpeg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-transition: background-image 0.6s linear 0.3s;
+  transition: background-image 0.6s linear 0.3s;
+}
+
+/* line 588, assets/sass/style.scss */
+.owl-pricing img {
+  width: 100%;
+}
+
+/* line 592, assets/sass/style.scss */
+.owl-pricing,
+.pricings {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* line 598, assets/sass/style.scss */
+.pricing {
+  position: relative;
+  width: 100%;
+}
+
+/* line 603, assets/sass/style.scss */
+.pricings .pricing .box-main,
+.pricings .pricing .box-second {
+  position: relative;
+  left: 25%;
+  display: inline-block;
+  width: 50%;
+  height: 300px;
+  padding: 50px 40px;
+  background: #bbb;
+  -webkit-transition: -webkit-transform 0.3s, background-image 0.3s, opacity 0.3s;
+  transition: transform 0.3s, background-image 0.3s, opacity 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 618, assets/sass/style.scss */
+.pricings .pricing .box-main {
+  z-index: 10;
+  padding-top: 40px;
+}
+
+/* line 623, assets/sass/style.scss */
+.pricings .pricing .box-main:not(.active) {
+  cursor: pointer;
+}
+
+/* line 627, assets/sass/style.scss */
+.pricings .pricing .box-main .info-icon {
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  pointer-events: none;
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+/* line 639, assets/sass/style.scss */
+.pricings .pricing .box-main:not(.active) .info-icon {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* line 645, assets/sass/style.scss */
+.pricings .pricing .box-main:not(.active):hover {
+  background: #afafaf;
+}
+
+/* line 649, assets/sass/style.scss */
+.pricings .pricing .box-main.active {
+  background: #4a4a94;
+  -webkit-transform: translateX(-99%);
+  -ms-transform: translateX(-99%);
+  transform: translateX(-99%);
+}
+
+/* line 656, assets/sass/style.scss */
+.pricings .pricing .box-second {
+  position: absolute;
+  top: 0;
+  right: 0% !important;
+  left: auto;
+  opacity: 0;
+  background: #afafaf;
+}
+
+/* line 665, assets/sass/style.scss */
+.pricings .pricing .box-second.active {
+  opacity: 1;
+  background: #4a4a94;
+}
+
+/* line 670, assets/sass/style.scss */
+.pricings .pricing.active .box-main,
+.pricings .pricing .box-second {
+  background: #4a4a94;
+}
+
+/* line 675, assets/sass/style.scss */
+.pricings .pricing .box-main a.btn {
+  margin-top: 50px;
+}
+
+/* line 679, assets/sass/style.scss */
+.owl-twitter i.icon {
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: white;
+}
+
+/* Footer */
+/* line 686, assets/sass/style.scss */
+footer {
+  padding: 140px 0 40px;
+  background: linear-gradient(rgba(8, 8, 8, 0.78), rgba(17, 17, 17, 0.49)), url("/wp-content/themes/bd_air_solution/assets/img/watercolor.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 692, assets/sass/style.scss */
+footer .trial-button {
+  overflow: hidden !important;
+  margin: 40px 0;
+}
+/* line 697, assets/sass/style.scss */
+footer .open-blink {
+  content: ' ';
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 20px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/* line 714, assets/sass/style.scss */
+footer .open-blink:before {
+  content: ' ';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  opacity: 0.1;
+  border-radius: 50%;
+  background-color: #4caf50;
+}
+/* line 727, assets/sass/style.scss */
+footer .opening-hours {
+  margin-top: 60px;
+}
+/* line 731, assets/sass/style.scss */
+footer .bottom-footer {
+  margin-top: 150px;
+}
+/* line 735, assets/sass/style.scss */
+footer .social-footer {
+  padding: 0;
+  list-style: none;
+}
+/* line 739, assets/sass/style.scss */
+footer .social-footer li {
+  display: inline-block;
+  margin: 0 10px;
+}
+/* line 743, assets/sass/style.scss */
+footer .social-footer li a {
+  font-size: 24px;
+  color: #fff;
+}
+/* line 749, assets/sass/style.scss */
+footer .social-footer li:hover a {
+  color: #4a4a94;
+}
+
+/* ============================================
+// CUSTOM
+//
+// ========================================== */
+/* line 761, assets/sass/style.scss */
+.owl-item .juicer-feed h1.referral a {
+  display: none !important;
+  opacity: 0;
+}
+
+/* line 766, assets/sass/style.scss */
+div#acf- {
+  background: red;
+  color: white;
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgba(51, 51, 51, 0.38);
+}
+
+/* line 772, assets/sass/style.scss */
+.main-nav {
+  margin-top: 30px;
+}
+
+/* line 775, assets/sass/style.scss */
+.empty {
+  position: relative;
+  margin: 15em;
+}
+
+/* Form Control */
+/* line 781, assets/sass/style.scss */
+.form-control {
+  font-size: 18px;
+  position: relative;
+  left: 0;
+  height: auto;
+  padding: 20px 30px;
+  border: 1px;
+  border-radius: 0;
+  box-shadow: 0;
+}
+
+/* line 792, assets/sass/style.scss */
+.form-control.form-white {
+  color: #fff;
+  border: 2px solid white;
+  background: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+/* line 800, assets/sass/style.scss */
+.form-control.form-white::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+
+/* line 805, assets/sass/style.scss */
+.form-control.form-white:-moz-placeholder {
+  opacity: 1;
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+
+/* line 811, assets/sass/style.scss */
+.form-control.form-white::-moz-placeholder {
+  opacity: 1;
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+
+/* line 817, assets/sass/style.scss */
+.form-control.form-white:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
+/* line 822, assets/sass/style.scss */
+.form-control.form-white:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Popup */
+/* line 827, assets/sass/style.scss */
+.modal {
+  padding: 0 25px !important;
+}
+
+/* line 831, assets/sass/style.scss */
+.modal-dialog {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* line 837, assets/sass/style.scss */
+.modal-popup {
+  position: relative;
+  padding: 45px 30px;
+  text-align: center;
+  background: url("/wp-content/themes/bd_air_solution/assets/img/popup.jpg");
+  box-shadow: none;
+  border-radius: 2px;
+}
+
+/* line 846, assets/sass/style.scss */
+.modal-popup a.close-link {
+  font-size: 22px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+}
+
+/* line 854, assets/sass/style.scss */
+.popup-form {
+  width: 90%;
+  max-width: 375px;
+  margin: 60px auto;
+}
+
+/* line 860, assets/sass/style.scss */
+.popup-form .form-control {
+  margin: 20px 0;
+}
+
+/* line 864, assets/sass/style.scss */
+.popup-form .form-control.dropdown {
+  text-align: left;
+}
+
+/* line 868, assets/sass/style.scss */
+.popup-form .form-control.dropdown:after {
+  content: '\f0d7';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  float: right;
+  color: white;
+}
+
+/* line 876, assets/sass/style.scss */
+.popup-form .dropdown .dropdown-menu {
+  top: 65px;
+  width: 100%;
+  padding: 0;
+  border: 2px solid white;
+  border-top: 0;
+  border-radius: 0;
+  background: white;
+  box-shadow: none;
+}
+
+/* line 887, assets/sass/style.scss */
+.popup-form .dropdown .dropdown-menu li {
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+}
+
+/* line 893, assets/sass/style.scss */
+.popup-form .dropdown .dropdown-menu li a {
+  width: 100%;
+  padding: 15px 30px;
+  color: #4a4a94;
+}
+
+/* line 899, assets/sass/style.scss */
+.popup-form .dropdown .dropdown-menu li:hover a {
+  color: #fff;
+  background: #4a4a94;
+}
+
+/* Checkbox */
+/* line 906, assets/sass/style.scss */
+.checkbox-holder {
+  white-space: nowrap;
+}
+
+/* line 910, assets/sass/style.scss */
+.checkbox {
+  position: relative;
+  display: block;
+}
+
+/* line 915, assets/sass/style.scss */
+.checkbox {
+  position: relative;
+}
+
+/* line 919, assets/sass/style.scss */
+.checkbox label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 2px solid white;
+  background: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+/* line 933, assets/sass/style.scss */
+.checkbox input[type=checkbox]:focus + label:before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 937, assets/sass/style.scss */
+.checkbox label:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  background: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 950, assets/sass/style.scss */
+.checkbox input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* line 957, assets/sass/style.scss */
+.checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+/* line 961, assets/sass/style.scss */
+.checkbox-holder span {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  white-space: normal;
+  color: #fff;
+}
+
+/* line 969, assets/sass/style.scss */
+.btn.btn-submit {
+  width: 100%;
+  margin-top: 30px;
+  color: #4a4a94;
+  border: 2px solid #fff;
+  background: #fff;
+}
+
+/* line 977, assets/sass/style.scss */
+.btn.btn-submit:focus {
+  font-weight: bold;
+}
+
+/* line 981, assets/sass/style.scss */
+.btn.btn-submit:hover {
+  color: #4a4a94;
+  background: #fff;
+}
+
+/* Mobile Nav */
+/* line 987, assets/sass/style.scss */
+.mobile-nav {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.98);
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+/* line 1005, assets/sass/style.scss */
+.mobile-nav.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 1012, assets/sass/style.scss */
+.mobile-nav ul {
+  display: table-cell;
+  padding: 0;
+  list-style: none;
+  vertical-align: middle;
+}
+
+/* line 1019, assets/sass/style.scss */
+.mobile-nav ul li {
+  margin: 25px 0;
+}
+
+/* line 1023, assets/sass/style.scss */
+.mobile-nav ul li a:not(.btn) {
+  color: #aaa;
+}
+
+/* line 1027, assets/sass/style.scss */
+.mobile-nav a.close-link {
+  font-size: 24px;
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 10px);
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  background: #4a4a94;
+}
+
+/* line 1039, assets/sass/style.scss */
+.row.title {
+  padding: 0 20px;
+}
+
+/* line 1043, assets/sass/style.scss */
+.light {
+  font-weight: 300;
+}
+
+/* line 1047, assets/sass/style.scss */
+.regular {
+  font-weight: 400;
+}
+
+/* line 1051, assets/sass/style.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* Colors */
+/* line 1056, assets/sass/style.scss */
+.white {
+  color: white;
+}
+
+/* line 1060, assets/sass/style.scss */
+.light-white {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 1064, assets/sass/style.scss */
+.white-bg {
+  background: white;
+}
+
+/* line 1068, assets/sass/style.scss */
+.gray-bg {
+  background: #f7f7f7;
+}
+
+/* line 1072, assets/sass/style.scss */
+.blue {
+  color: #4a4a94;
+}
+
+/* line 1076, assets/sass/style.scss */
+.blue-bg {
+  background: #4a4a94;
+}
+
+/* line 1080, assets/sass/style.scss */
+.muted {
+  color: #989da0;
+}
+
+/* line 1084, assets/sass/style.scss */
+.margin-top {
+  margin-top: 150px;
+}
+
+/* line 1088, assets/sass/style.scss */
+.hide-bullets {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+
+/* line 1094, assets/sass/style.scss */
+.thumbnail {
+  padding: 0;
+}
+
+/* line 1098, assets/sass/style.scss */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  /* line 1102, assets/sass/style.scss */
+  h1 {
+    font-size: 36px;
+  }
+
+  /* line 1105, assets/sass/style.scss */
+  h2 {
+    font-size: 28px;
+  }
+
+  /* line 1108, assets/sass/style.scss */
+  h3 {
+    font-size: 24px;
+  }
+
+  /* line 1111, assets/sass/style.scss */
+  h4 {
+    font-size: 20px;
+  }
+
+  /* line 1114, assets/sass/style.scss */
+  h5 {
+    font-size: 16px;
+  }
+
+  /* line 1117, assets/sass/style.scss */
+  h6 {
+    font-size: 12px;
+  }
+
+  /* line 1120, assets/sass/style.scss */
+  .section {
+    padding: 30px 0;
+  }
+
+  /* line 1123, assets/sass/style.scss */
+  .juicer-feed h1.referral a,
+  .juicer-feed h1.referral {
+    display: none !important;
+  }
+}
+/* Media Queries */
+@media (max-width: 991px) {
+  /* line 1132, assets/sass/style.scss */
+  .text-center-mobile {
+    text-align: center !important;
+  }
+
+  /* line 1135, assets/sass/style.scss */
+  .juicer-feed h1.referral a,
+  .juicer-feed h1.referral {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 1142, assets/sass/style.scss */
+  .pricing {
+    margin-bottom: 30px;
+  }
+
+  /* line 1145, assets/sass/style.scss */
+  .pricings .pricing .info-icon {
+    display: none;
+  }
+
+  /* line 1148, assets/sass/style.scss */
+  .pricings .pricing .box-main,
+  .pricings .pricing .box-second {
+    left: 0;
+    width: 100%;
+    padding: 50px 50px 0;
+    text-align: left;
+    background: #4a4a94;
+  }
+
+  /* line 1156, assets/sass/style.scss */
+  .pricings .pricing .box-main.active {
+    background: #4a4a94;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  /* line 1162, assets/sass/style.scss */
+  .pricings .pricing .box-second {
+    position: relative;
+    opacity: 1;
+  }
+
+  /* line 1166, assets/sass/style.scss */
+  .popup-form {
+    width: 100%;
+    margin: 60px auto;
+  }
+
+  /* line 1170, assets/sass/style.scss */
+  .modal {
+    padding: 0 10px !important;
+  }
+
+  /* line 1173, assets/sass/style.scss */
+  .popup-form .form-control:not(.dropdown):focus {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  /* line 1178, assets/sass/style.scss */
+  .juicer-feed h1.referral a,
+  .juicer-feed h1.referral {
+    display: none !important;
+  }
+}
+@media (max-width: 400px) {
+  /* line 1185, assets/sass/style.scss */
+  header .typed-cursor {
+    display: none;
+  }
+
+  /* line 1188, assets/sass/style.scss */
+  .pricings .pricing .box-second {
+    padding-top: 0;
+  }
+
+  /* line 1191, assets/sass/style.scss */
+  .juicer-feed h1.referral a,
+  .juicer-feed h1.referral {
+    display: none !important;
+  }
+}
